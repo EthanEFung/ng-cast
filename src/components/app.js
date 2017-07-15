@@ -12,7 +12,8 @@ angular.module('video-player')
   .controller('appController', function() {
     let $ctrl = this;
     $ctrl.videos = window.exampleVideoData;
-    $ctrl.currentVideo = $ctrl.videos[0];
+    $ctrl.video = window.exampleVideoData[0];
     $ctrl.selectVideo = function() {};
     $ctrl.searchResults = function() {};
+    $ctrl.onClick = function () {};
   });
