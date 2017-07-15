@@ -6,6 +6,9 @@ angular.module('video-player')
       onClick: '<'
     },
     templateUrl: 'src/templates/videoList.html',
-    controller: 'app-controller'
+    controller: 'videoListController'
+  })
+  .controller('videoListController', function() {
+
   });
 

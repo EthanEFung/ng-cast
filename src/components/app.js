@@ -1,14 +1,18 @@
 angular.module('video-player')
 
-  .component('app', {
-    templateUrl: 'src/templates/app.html'
-  })
-  .service('AppService', function($http) {
-    videos = window.exampleVideoData;
-  })
-  .controller('app-controller', function($scope) {
+  // .service('AppService', function($http) {
+  //   $http.videos = window.exampleVideoData;
+  // })
 
-    $scope.$ctrl.currentVideo = $scope.videos[0];
-    $scope.$ctrl.selectVideo = function() {};
-    $scope.$ctrl.searchResults = function() {};
+  .component('app', {
+    templateUrl: 'src/templates/app.html',
+    controller: 'appController'
+  })
+
+  .controller('appController', function() {
+    let $ctrl = this;
+    $ctrl.videos = window.exampleVideoData;
+    $ctrl.currentVideo = $ctrl.videos[0];
+    $ctrl.selectVideo = function() {};
+    $ctrl.searchResults = function() {};
   });

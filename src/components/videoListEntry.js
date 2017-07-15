@@ -4,12 +4,9 @@ angular.module('video-player')
     bindings: {
       video: '<',
     },
-    templateUrl: 'src/templates/videoListEntry.html'
+    templateUrl: 'src/templates/videoListEntry.html',
+    controller: 'videoListEntryController'
   })
-  .controller('video-list-entry-controller', function($scope) {
-    // $scope.snippet = video.snippet;	
+  .controller('videoListEntryController', function() {
 
-    // $scope.thumbnail = video.snippet.thumbnails.default;
-    // $scope.title = video.snippet.title;
-    // $scope.description = video.snippet.description;
   });
