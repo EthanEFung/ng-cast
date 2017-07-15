@@ -13,7 +13,11 @@ angular.module('video-player')
     let $ctrl = this;
     $ctrl.videos = window.exampleVideoData;
     $ctrl.video = window.exampleVideoData[0];
+    $ctrl.currentVideo = window.exampleVideoData[0];
     $ctrl.selectVideo = function() {};
     $ctrl.searchResults = function() {};
-    $ctrl.onClick = function () {};
+    $ctrl.onClick = function () {
+      console.log('I clicked');
+      $ctrl.currentVideo = video;
+    };
   });
