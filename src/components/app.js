@@ -9,15 +9,13 @@ angular.module('video-player')
     controller: 'appController'
   })
 
-  .controller('appController', function() {
+  .controller('appController', function($scope) {
     let $ctrl = this;
     $ctrl.videos = window.exampleVideoData;
-    $ctrl.video = window.exampleVideoData[0];
-    $ctrl.currentVideo = window.exampleVideoData[0];
-    $ctrl.selectVideo = function() {};
-    $ctrl.searchResults = function() {};
-    $ctrl.onClick = function () {
-      console.log('I clicked');
-      $ctrl.currentVideo = video;
+    $scope.$ctrl.video = window.exampleVideoData[0];
+    // $ctrl.currentVideo = window.exampleVideoData[0];
+    $ctrl.setVideo = (video) => {
+      $ctrl.video = video;
     };
+    $ctrl.searchResults = function() {};
   });
